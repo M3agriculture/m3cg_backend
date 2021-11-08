@@ -1,0 +1,24 @@
+{
+  "name": "m3cg_backend",
+  "version": "1.0.0",
+  "description": "This is backend of m3cg app.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M3agriculture/m3cg_backend.git"
+  },
+  "author": "M3CG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M3agriculture/m3cg_backend/issues"
+  },
+  "homepage": "https://github.com/M3agriculture/m3cg_backend#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  }
+}
