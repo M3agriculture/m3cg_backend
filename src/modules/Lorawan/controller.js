@@ -82,8 +82,7 @@ class LorawanController {
             })
             return res.status(200).json({ result: true, time_slots: timeSlots });
         } catch (error) {
-            console.log("Error", error)
-            return res.status(500).json({ result: false, error: error });
+             return res.status(500).json({ result: false, error: error });
         }
         //[6:00,13:00,17:00]
     }
