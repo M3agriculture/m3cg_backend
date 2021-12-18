@@ -80,7 +80,7 @@ class LorawanController {
                 let time = moment(item.reported_at).format("HH:mm:ss")
                 timeSlots.push(time);
             })
-            return res.status(200).json({ result: true, readings: timeSlots });
+            return res.status(200).json({ result: true, time_slots: timeSlots });
         } catch (error) {
             console.log("Error", error)
             return res.status(500).json({ result: false, error: error });
