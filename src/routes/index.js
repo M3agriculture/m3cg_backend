@@ -9,6 +9,7 @@ const LorawanController = require('../modules/Lorawan/controller');
 const UserController = require('../modules/User/controller');
 
 router.get('/all-devices', authMiddleware, LorawanController.allDevices);
+router.post('/devices-time-slots', authMiddleware, LorawanController.devicesTimeSlots);
 router.post('/devices-readings', authMiddleware, LorawanController.devices);
 
 // Login
