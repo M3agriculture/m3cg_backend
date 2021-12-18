@@ -51,6 +51,7 @@ class LorawanController {
             if (!(device_id)) {
                 return res.status(400).json({ result: false, message: "Device id field is required" });
             }
+           
             let query = { temperature: { $gte: 20 } }
 
             if (device_id)
