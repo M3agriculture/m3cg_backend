@@ -51,11 +51,11 @@ class LorawanController {
             if (!(device_id)) {
                 return res.status(400).json({ result: false, message: "Device id field is required" });
             }
-            if (!(hightest_temp)) {
-                return res.status(400).json({ result: false, message: "Highest Temprature field is required" });
-            }
-            // let query = { temperature: { $gte: 55,$lte:80 } }
-            let query={}
+            // if (!(hightest_temp)) {
+            //     return res.status(400).json({ result: false, message: "Highest Temprature field is required" });
+            // }
+            let query = { temperature: { $gte: 55,$lte:80 } }
+            // let query={}
             if (device_id)
                 query.device_id = device_id
 
