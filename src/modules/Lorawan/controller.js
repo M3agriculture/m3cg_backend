@@ -47,13 +47,15 @@ class LorawanController {
         //device_id
         //single date or date-range
         try {
-            let { device_id, startDate, endDate } = req.body;
+            let { device_id, startDate, endDate,hightest_temp } = req.body;
             if (!(device_id)) {
                 return res.status(400).json({ result: false, message: "Device id field is required" });
             }
-           
-            let query = { temperature: { $gte: 55,$lte:80 } }
-
+            if (!(hightest_temp)) {
+                return res.status(400).json({ result: false, message: "Highest Temprature field is required" });
+            }
+            // let query = { temperature: { $gte: 55,$lte:80 } }
+            let query={}
             if (device_id)
                 query.device_id = device_id
 
@@ -64,7 +66,11 @@ class LorawanController {
             if (startDate && endDate) {
                 query.reported_at = { $gte: Number(moment(startDate).format('x')), $lte: Number(moment(endDate).format('x')) }
             }
+            if (hightest_temp) {
+                query.temperature = { $gte: parseFloat(hightest_temp) }
+            }
 
+            console.log(query)
             let response = await LorawanDevices.aggregate([{
                 $match: { ...query }
             },
