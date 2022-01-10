@@ -12,7 +12,7 @@ const UserController = require('../modules/User/controller');
 router.get('/all-devices', authMiddleware, LorawanController.allDevices);
 router.post('/devices-time-slots', authMiddleware, LorawanController.devicesTimeSlots);
 router.post('/devices-readings', authMiddleware, LorawanController.devices);
-router.get('/degree-days', authMiddleware, DegreeDayController.getDegreeDays);
+router.get('/degree-days', DegreeDayController.getDegreeDays);
 
 // Login
 router.post("/login", UserController.login);
