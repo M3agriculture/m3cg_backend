@@ -1,40 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ed3af41.chunk.css",
-    "main.js": "/static/js/main.7057a42c.chunk.js",
-    "main.js.map": "/static/js/main.7057a42c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.47917e5f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.47917e5f.js.map",
-    "static/css/2.fe743825.chunk.css": "/static/css/2.fe743825.chunk.css",
-    "static/js/2.2d849eea.chunk.js": "/static/js/2.2d849eea.chunk.js",
-    "static/js/2.2d849eea.chunk.js.map": "/static/js/2.2d849eea.chunk.js.map",
-    "static/js/3.80f4c769.chunk.js": "/static/js/3.80f4c769.chunk.js",
-    "static/js/3.80f4c769.chunk.js.map": "/static/js/3.80f4c769.chunk.js.map",
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.fe5910c3.js",
+    "static/js/787.75333c3b.chunk.js": "/static/js/787.75333c3b.chunk.js",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "static/css/2.fe743825.chunk.css.map": "/static/css/2.fe743825.chunk.css.map",
-    "static/css/main.5ed3af41.chunk.css.map": "/static/css/main.5ed3af41.chunk.css.map",
-    "static/js/2.2d849eea.chunk.js.LICENSE.txt": "/static/js/2.2d849eea.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/upload-bg.6b4bde12.png",
-    "static/media/Justin-Bieber.8205f2e7.jpg": "/static/media/Justin-Bieber.8205f2e7.jpg",
-    "static/media/Pay-play-bg.58834fd6.png": "/static/media/Pay-play-bg.58834fd6.png",
-    "static/media/Singer.68e32687.svg": "/static/media/Singer.68e32687.svg",
-    "static/media/Home.css": "/static/media/header-bg.e1abf0b5.png",
-    "static/media/artist-detail-placeholder.09cb794a.png": "/static/media/artist-detail-placeholder.09cb794a.png",
-    "static/media/Nft_slide_modal.css": "/static/media/ethereum.6d0af8d7.svg",
-    "static/media/Golden_West.css": "/static/media/golden_west_bg.95611be6.svg",
-    "static/media/img-placeholder-large.d0346b1e.jpg": "/static/media/img-placeholder-large.d0346b1e.jpg",
-    "static/media/music-bg.68e32687.svg": "/static/media/music-bg.68e32687.svg",
-    "static/media/music-graph.f1ccec99.svg": "/static/media/music-graph.f1ccec99.svg",
-    "static/media/music-img.05d67c40.png": "/static/media/music-img.05d67c40.png",
-    "static/media/music-layers.5998928b.svg": "/static/media/music-layers.5998928b.svg",
-    "static/media/music_item.dd8783b0.png": "/static/media/music_item.dd8783b0.png",
-    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf"
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.fe5910c3.js.map": "/static/js/main.fe5910c3.js.map",
+    "787.75333c3b.chunk.js.map": "/static/js/787.75333c3b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.47917e5f.js",
-    "static/css/2.fe743825.chunk.css",
-    "static/js/2.2d849eea.chunk.js",
-    "static/css/main.5ed3af41.chunk.css",
-    "static/js/main.7057a42c.chunk.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.fe5910c3.js"
   ]
 }
