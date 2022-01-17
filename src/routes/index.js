@@ -18,8 +18,6 @@ router.get('/degree-days-entirely-both-threshold', DegreeDayController.getDegree
 router.get('/degree-days-intercepted-lower-threshold', DegreeDayController.getInterceptedLowerThreshold);
 router.get('/degree-days-Above-both-threshold', DegreeDayController.getDegreeDaysAboveBothThreshold);
 router.get('/degree-days-Below-both-threshold', DegreeDayController.getDegreeDaysBelowBothThreshold);
-
-
 // Login
 router.post("/login", UserController.login);
 
