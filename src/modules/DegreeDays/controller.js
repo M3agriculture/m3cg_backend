@@ -15,8 +15,8 @@ class DegreeCalculator {
                 //     "Column1": null,
                 //     "Tmin": 45,
                 //     "Tmax": 90,
-                //     "LowerThreshold": 50,
-                //     "UpperThreshold": 88,
+                //     "LowerThreshold": 0,
+                //     "UpperThreshold": 0,
                 //     "Column6": null,
                 //     "Amplitude ": 22.5
                 // },
@@ -1328,6 +1328,7 @@ class DegreeCalculator {
             //     return res.status(400).json({ result: false, message: "Minimum Temprature field is required" });
             // }
 
+            console.log("sheet .length", sheet.length)
             let DegreeDaysData = []
             sheet.map(item => {
                 let Tu = item.UpperThreshold; let Tl = item.LowerThreshold; let Tmax = Number(item.Tmax); let Tmin = Number(item.Tmin); let alpha = 1;
@@ -1341,7 +1342,7 @@ class DegreeCalculator {
                 })
 
                 let DegreeDay = accomulator / 24
-                if (DegreeDay)
+                // if (DegreeDay)
                     DegreeDaysData.push(DegreeDay)
             })
             return res.status(200).json({ result: true, degree_day: DegreeDaysData });
