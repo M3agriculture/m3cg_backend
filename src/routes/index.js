@@ -12,6 +12,10 @@ const UserController = require('../modules/User/controller');
 router.get('/all-devices', authMiddleware, LorawanController.allDevices);
 router.post('/devices-time-slots', authMiddleware, LorawanController.devicesTimeSlots);
 router.post('/devices-readings', authMiddleware, LorawanController.devices);
+
+router.get('/all-devices-front', LorawanController.allDevices);
+router.post('/devices-readings-front', LorawanController.devices);
+
 router.get('/degree-days', DegreeDayController.getDegreeDays);
 router.get('/degree-days-both-threshold', DegreeDayController.getDegreeDaysBothThreshold);
 router.get('/degree-days-entirely-both-threshold', DegreeDayController.getDegreeDaysForEntirelyBothThreshold);
