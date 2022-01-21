@@ -24,14 +24,18 @@ class DegreeCalculator {
             let devices = await LorawanDevices.find(query)
 
             let temp_arr = []
+            let time_arr_with_temp = []
+            let time_arr=[]
             devices.map(device => {
                 temp_arr.push(device.temperature)
+                time_arr.push(moment(device.reported_at).format("HH:mm:ss"))
+                time_arr_with_temp.push({temp:device.temperature,time:moment(device.reported_at).format("HH:mm:ss")})
                 console.log("Device", device)
             })
             let min_temp = Math.min(...temp_arr);
             let max_temp = Math.max(...temp_arr);
 
-            console.log(min_temp, max_temp, temp_arr)
+            console.log(min_temp, max_temp,  time_arr_with_temp)
 
             let DegreeDay = 0;
             let Tmin = min_temp; let Tmax = max_temp;
@@ -71,7 +75,7 @@ class DegreeCalculator {
                 console.log("6")
                 DegreeDay = 0;
             }
-            return res.status(200).json({ result: true, degree_day: DegreeDay, tempratues: temp_arr });
+            return res.status(200).json({ result: true, degree_day: DegreeDay, tempratues: temp_arr,times:time_arr });
 
         } catch (error) {
             console.log(error)
