@@ -74,7 +74,9 @@ class DegreeCalculator {
                 console.log("6")
                 DegreeDay = 0;
             }
-            return res.status(200).json({ result: true, degree_day: DegreeDay, tempratues: temp_arr,times:time_arr });
+
+
+            return res.status(200).json({ result: true, degree_day: DegreeDay > 0 ? DegreeDay : 0 , tempratues: temp_arr,times:time_arr });
 
         } catch (error) {
             console.log(error)
