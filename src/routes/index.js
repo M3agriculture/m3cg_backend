@@ -17,11 +17,6 @@ router.get('/all-devices-front', LorawanController.allDevices);
 router.post('/devices-readings-front', LorawanController.devices);
 
 router.get('/degree-days', DegreeDayController.getDegreeDays);
-router.get('/degree-days-both-threshold', DegreeDayController.getDegreeDaysBothThreshold);
-router.get('/degree-days-entirely-both-threshold', DegreeDayController.getDegreeDaysForEntirelyBothThreshold);
-router.get('/degree-days-intercepted-lower-threshold', DegreeDayController.getInterceptedLowerThreshold);
-router.get('/degree-days-Above-both-threshold', DegreeDayController.getDegreeDaysAboveBothThreshold);
-router.get('/degree-days-Below-both-threshold', DegreeDayController.getDegreeDaysBelowBothThreshold);
 // Login
 router.post("/login", UserController.login);
 
