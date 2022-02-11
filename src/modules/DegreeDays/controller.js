@@ -18,21 +18,30 @@ class DegreeCalculator {
             let query = {}
             let startDate = moment.utc().startOf('day');
             let endDate = moment.utc().endOf('day');
+
+            console.log("req.query", req.query)
+            if (req.query.start_date && req.query.end_date) {
+                console.log("When Date given in query params")
+                startDate = moment(new Date(req.query.start_date)).utc()
+                endDate = moment(new Date(req.query.end_date)).utc()
+            }
+
+            console.log("start", startDate, endDate)
             query.device_id = device_id
             query.reported_at = { $gte: Number(moment(startDate).format('x')), $lte: Number(moment(endDate).format('x')) }
             let devices = await LorawanDevices.find(query)
 
             let temp_arr = []
-            let time_arr=[]
+            let time_arr = []
             devices.map(device => {
                 temp_arr.push(device.temperature)
                 time_arr.push(moment(device.reported_at).format("HH:mm:ss"))
-                 console.log("Device", device)
+                console.log("Device", device)
             })
             let min_temp = Math.min(...temp_arr);
             let max_temp = Math.max(...temp_arr);
-            let alpha=(max_temp-min_temp)/2;
- 
+            let alpha = (max_temp - min_temp) / 2;
+
             let DegreeDay = 0;
             let Tmin = min_temp; let Tmax = max_temp;
             if (min_temp > Tu && max_temp > Tl) {
@@ -71,7 +80,8 @@ class DegreeCalculator {
                 console.log("6")
                 DegreeDay = 0;
             }
-            return res.status(200).json({ result: true, degree_day: DegreeDay, tempratues: temp_arr,times:time_arr });
+            // return res.status(200).json({ result: true, degree_day: DegreeDay, tempratues: temp_arr, times: time_arr });
+            return res.status(200).json({ result: true, degree_day: DegreeDay > 0 ? DegreeDay : 0, tempratues: temp_arr, times: time_arr });
 
         } catch (error) {
             console.log(error)
